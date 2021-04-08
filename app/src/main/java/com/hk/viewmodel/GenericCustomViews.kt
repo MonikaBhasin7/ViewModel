@@ -1,6 +1,8 @@
 package com.hk.viewmodel
 
+import android.content.Context
+
 interface GenericCustomViews {
-    fun onStart()
-    fun onHide()
+    fun onStart(context: Context)
+    fun onHide(context: Context)
 }

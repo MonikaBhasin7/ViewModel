@@ -15,5 +15,6 @@ class MainActivity : AppCompatActivity() {
         lifecycle.addObserver(ProgressObserver)
 
         ProgressObserver.initializeCustomView(ProgressCustomView())
+        ProgressObserver.initializeContext(this)
     }
 }

@@ -12,9 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         ViewModelProvider(this).get(MainViewModel::class.java)
-        lifecycle.addObserver(ProgressObserver)
-
-        ProgressObserver.initializeCustomView(ProgressCustomView())
-        ProgressObserver.initializeContext(this)
+        val progressObserver = ProgressObserver(this, ProgressCustomView())
+        lifecycle.addObserver(progressObserver)
     }
 }
